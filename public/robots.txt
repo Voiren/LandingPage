@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://voiren.com/sitemap-index.xml
