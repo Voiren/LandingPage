@@ -5,19 +5,19 @@ const packagesData = {
     description: "Optimiza y automatiza tus flujos de trabajo para ahorrar tiempo y reducir errores.",
     levels: [
       {
-        name: "Básica",
-        description: "Automatización de tareas simples y repetitivas",
-        features: ["Flujos simples", "Bajo volumen de datos", "Configuración rápida"]
+        name: "Menos trabajo manual (Pack Inicio)",
+        description: "Menos tareas repetitivas, y menos errores humanos",
+        features: ["Diagnóstico de 1 proceso", "Automatización de envio de correos u otros procesos", "Documentación básica"]
       },
       {
-        name: "Intermedia",
-        description: "Automatización con integraciones y lógica condicional",
-        features: ["Integraciones múltiples", "Lógica condicional avanzada", "Manejo de errores"]
+        name: "Procesos ordenados (Pack Crecimiento)",
+        description: "Procesos más rápidos, trazables y confiables",
+        features: ["Diagnóstico de 2-3 procesos", "Automatización encadenada (flujo completo)", "Integraciones con otras herramientas (Zapier, APIs)"]
       },
       {
-        name: "Avanzada",
-        description: "Automatización completa con análisis e inteligencia",
-        features: ["IA y machine learning", "Análisis predictivo", "Monitoreo 24/7"]
+        name: "Automatización inteligente (Pack Premium)",
+        description: "Operación estable, escalable y con alta disponibilidad",
+        features: ["Análisis profundo del flujo operativo", "Automatizaciones múltiples", "Despliegue en la nube"]
       }
     ]
   },
@@ -26,40 +26,40 @@ const packagesData = {
     description: "Desarrollamos sistemas internos personalizados que se adaptan perfectamente a tus procesos.",
     levels: [
       {
-        name: "MVP",
-        description: "Versión mínima viable para validar tu concepto",
-        features: ["Funcionalidades esenciales", "Despliegue rápido", "Costo optimizado"]
+        name: "Sistema simple (Pack Básico)",
+        description: "Ej: Control de pedidos, registro de clientes, etc.",
+        features: ["Backend y CRUD simples", "Autenticación", "Interfaz funcional"]
       },
       {
-        name: "Escalable",
-        description: "Sistema preparado para crecer con tu negocio",
-        features: ["Arquitectura modular", "Base de datos optimizada", "Multi-usuario"]
+        name: "Herramienta de trabajo (Pack Operativo)",
+        description: "Sistema de uso diarío para tu equipo.",
+        features: ["Roles de usuario", "Integraciones básicas", "Despliegue productivo"]
       },
       {
-        name: "Enterprise",
-        description: "Sistema robusto con todas las características",
-        features: ["Alta disponibilidad", "Seguridad avanzada", "Soporte 24/7"]
+        name: "Sistema Crítico (Pack Premium)",
+        description: "Para los procesos más importantes de tu negocio, con alta demanda y necesidad de estabilidad.",
+        features: ["Arquitectura Robusta", "Monitoreo", "Backups y recuperación"]
       }
     ]
   },
   data: {
-    title: "Datos y reportes",
+    title: "Datos, reportes y calidad",
     description: "Transforma tus datos en información valiosa con reportes actionables y visualizaciones.",
     levels: [
       {
-        name: "Reportes estándar",
-        description: "Reportes básicos y periódicos de tus datos",
-        features: ["Reportes automáticos", "Exportación múltiple", "Horarios flexibles"]
+        name: "Diagnóstico de Datos",
+        description: "Saber que datos sirven, cuales no, y cómo mejorarlos",
+        features: ["Auditoría de datos", "Detección de errores", "Informe claro"]
       },
       {
-        name: "Dashboards interactivos",
-        description: "Visualización dinámica de tus datos en tiempo real",
-        features: ["Gráficos interactivos", "Filtros personalizados", "Actualización en tiempo real"]
+        name: "Control y reportes",
+        description: "Gestión y análisis de tus datos con reportes claros",
+        features: ["Limpieza y validación automática", "Dashboards simples", "Métricas clave"]
       },
       {
-        name: "Análisis avanzado",
-        description: "Análisis profundo con inteligencia de negocios",
-        features: ["Predicciones", "Análisis de tendencias", "Insights automáticos"]
+        name: "Data en Producción",
+        description: "Tus datos siempre listos, confiables y con reportes en tiempo real",
+        features: ["Validaciones continuas", "Reportes en tiempo real", "Insights automáticos"]
       }
     ]
   }
