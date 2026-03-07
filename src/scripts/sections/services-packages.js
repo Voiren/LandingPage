@@ -74,7 +74,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Abrir modal al hacer click en los botones
   packageButtons.forEach(button => {
-    button.addEventListener('click', function() {
+    button.addEventListener('click', function(e) {
+      e.preventDefault(); // Prevenir el comportamiento por defecto del enlace
       const packageId = this.dataset.packageBtn;
       openPackageModal(packageId);
     });

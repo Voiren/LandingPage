@@ -205,3 +205,569 @@
     text-align: center;
   }
 }
+
+/* === Services Section === */
+.services {
+  background-color: var(--color-background);
+  padding: 6rem 2rem;
+  text-align: center;
+  margin: 0 auto;
+  border-bottom: 2px solid var(--color-secondary);
+}
+
+.services  {
+  position: relative;
+  padding: 3rem 1.5rem;
+  background: 
+    radial-gradient(
+      circle at top right,
+      rgba(79, 191, 185, 0.18),
+      transparent 60%
+    ),
+    radial-gradient(
+      circle at bottom left,
+      rgba(47, 143, 139, 0.18),
+      transparent 60%
+    ),
+    url("https://cdn.pixabay.com/photo/2016/10/17/14/31/background-1747792_1280.jpg");
+  overflow: hidden;
+  border-bottom: 3px solid var(--color-primary);
+}
+
+.services__header {
+  background: transparent;
+}
+
+
+.services__header h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+  background: transparent;
+}
+
+.services__header p {
+  font-size: 1.2rem;
+  color: var(--color-text-secondary);
+  max-width: 720px;
+  margin: 0 auto 4rem;
+  line-height: 1.7;
+  background: transparent;
+}
+
+/* === Packages Grid === */
+.services__packages {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: transparent;
+}
+
+@media (min-width: 1024px) {
+  .services__packages {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* === Package Card === */
+.package {
+  background-color: #fff;
+  border: 2px solid var(--color-accent);
+  border-radius: 16px;
+  padding: 2.5rem 2rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: left;
+}
+
+.package:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+  border-color: var(--color-primary);
+}
+
+/* === Package Body === */
+.package__body {
+  flex-grow: 1;
+  margin-bottom: 2rem;
+  background: transparent;
+}
+
+.package__body p {
+  background: transparent;
+}
+
+
+
+.package__title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+  background: transparent;
+}
+
+.package__description {
+  font-size: 1rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  background: transparent;
+}
+
+/* === Package Highlights === */
+.package__highlights {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  background: transparent;
+}
+
+.package__highlights li {
+  font-size: 0.95rem;
+  color: var(--color-text);
+  padding-left: 1.5rem;
+  position: relative;
+  background: transparent;
+}
+
+.package__cta img {
+  color: #fff;
+  background: transparent;
+}
+
+.package__highlights li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--color-secondary);
+  font-weight: 700;
+}
+
+/* === Package CTA Button === */
+.package__cta {
+  background-color: var(--color-primary);
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.2rem;
+  width: 100%;
+}
+
+.package__cta:hover {
+  background-color: var(--color-secondary);
+  transform: scale(1.02);
+}
+
+.package__cta:active {
+  transform: scale(0.98);
+}
+
+.package__cta svg {
+  transition: transform 0.3s ease;
+}
+
+.package__cta:hover svg {
+  transform: translateX(4px);
+}
+
+/* === Responsive Typography === */
+@media (max-width: 768px) {
+  .services {
+    padding: 4rem 2rem;
+  }
+
+  .services__header h2 {
+    font-size: 2rem;
+  }
+
+  .services__header p {
+    font-size: 1rem;
+    margin-bottom: 3rem;
+  }
+
+  .services__packages {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .package {
+    padding: 2rem 1.5rem;
+  }
+
+  .package__title {
+    font-size: 1.25rem;
+  }
+
+  .package__description {
+    font-size: 0.95rem;
+  }
+
+  .package__highlights li {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .services__header h2 {
+    font-size: 1.75rem;
+  }
+
+  .services__header p {
+    font-size: 0.95rem;
+  }
+
+  .package {
+    padding: 1.5rem 1rem;
+  }
+
+  .package__title {
+    font-size: 1.1rem;
+    background: transparent;
+  }
+
+  .package__description {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+
+  .package__highlights {
+    gap: 0.5rem;
+  }
+
+  .package__highlights li {
+    font-size: 0.85rem;
+  }
+
+  .package__cta {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.95rem;
+  }
+}
+
+/* === Packages Modal (Pseudo-pestaña flotante) === */
+
+/* Overlay de fondo */
+.packages-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 1000;
+}
+
+.packages-modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Modal principal */
+.packages-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.95);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+  z-index: 1001;
+  width: 90%;
+  max-width: 700px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.packages-modal.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* Contenido del modal */
+.packages-modal__content {
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 3rem;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+/* Botón de cerrar */
+.packages-modal__close {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  background: none;
+  border: none;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--color-text-secondary);
+  transition: all 0.3s ease;
+  border-radius: 8px;
+}
+
+.packages-modal__close:hover {
+  background-color: var(--color-accent);
+  color: #fff;
+  transform: rotate(90deg);
+}
+
+/* Header del modal */
+.packages-modal__header {
+  margin-bottom: 2.5rem;
+  text-align: left;
+  background: transparent;
+}
+
+.packages-modal__title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  margin-bottom: 0.75rem;
+  background: transparent;
+}
+
+.packages-modal__description {
+  font-size: 1rem;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  background: transparent;
+}
+
+/* Contenedor de niveles */
+.packages-modal__levels {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+  background: transparent;
+}
+
+/* Card de nivel */
+.package-level {
+  background: linear-gradient(135deg, #f8f9fa 0%, #f0f0f0 100%);
+  border: 2px solid var(--color-accent);
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.package-level::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.5s ease;
+}
+
+.package-level:hover::before {
+  left: 100%;
+}
+
+.package-level:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  border-color: var(--color-primary);
+}
+
+.package-level__name {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 0.75rem;
+  background: transparent;
+}
+
+.package-level__description {
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 1rem;
+  line-height: 1.5;
+  background: transparent;
+}
+
+.package-level__features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  background: transparent;
+}
+
+.package-level__features li {
+  font-size: 0.85rem;
+  color: var(--color-text);
+  padding-left: 1rem;
+  position: relative;
+  background: transparent;
+}
+
+.package-level__features li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: var(--color-secondary);
+  font-weight: 700;
+}
+
+/* CTA Button en el modal */
+.packages-modal__cta {
+  width: 100%;
+  background-color: var(--color-primary);
+  color: #fff;
+  border: none;
+  text-decoration: none;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.packages-modal__cta:hover {
+  background-color: var(--color-secondary);
+  transform: translateY(-2px);
+}
+
+.packages-modal__cta:active {
+  transform: translateY(0);
+}
+
+.packages-modal__cta svg {
+  transition: transform 0.3s ease;
+  background: transparent;
+}
+
+.packages-modal__cta:hover svg {
+  transform: translateX(4px);
+}
+
+/* Responsive para modal */
+@media (max-width: 768px) {
+  .packages-modal__content {
+    padding: 2rem 1.5rem;
+  }
+
+  .packages-modal__close {
+    top: 1rem;
+    right: 1rem;
+  }
+
+  .packages-modal__header {
+    margin-bottom: 2rem;
+  }
+
+  .packages-modal__description {
+    font-size: 0.95rem;
+  }
+
+  .packages-modal__levels {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .package-level {
+    padding: 1.25rem;
+  }
+
+  .package-level__name {
+    font-size: 1.1rem;
+  }
+
+  .package-level__description {
+    font-size: 0.85rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .packages-modal__cta {
+    padding: 0.875rem 1.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .packages-modal {
+    width: 95%;
+  }
+
+  .packages-modal__content {
+    padding: 1.5rem 1rem;
+    border-radius: 12px;
+  }
+
+  .packages-modal__close {
+    width: 36px;
+    height: 36px;
+  }
+
+  .packages-modal__close svg {
+    width: 20px;
+    height: 20px;
+  }
+
+
+
+  .packages-modal__description {
+    font-size: 0.9rem;
+  }
+
+  .packages-modal__levels {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .package-level {
+    padding: 1rem;
+  }
+
+  .package-level__name {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .package-level__description {
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .package-level__features li {
+    font-size: 0.8rem;
+  }
+}
