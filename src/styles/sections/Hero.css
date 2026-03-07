@@ -1,6 +1,6 @@
 .hero {
   position: relative;
-  padding: 3rem 2.5rem 3rem;
+  padding: 2.5rem 1rem;
   overflow: hidden;
   background: linear-gradient(to bottom,
     #1F5E5B,
@@ -10,10 +10,10 @@
 .hero::after {
   content: "";
   position: absolute;
-  top: -10%;
-  right: -10%;
-  width: 380px;
-  height: 380px;
+  top: -12%;
+  right: -24%;
+  width: 220px;
+  height: 220px;
 
   background: linear-gradient(
     135deg,
@@ -37,10 +37,10 @@
 }
 
 .hero h1 {
-  font-size: clamp(2.2rem, 4vw, 3.2rem);
-  line-height: 1.15;
+  font-size: clamp(1.8rem, 7vw, 3.2rem);
+  line-height: 1.2;
   color: var(--color-background);
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   background: transparent;
 }
 
@@ -49,8 +49,8 @@
   background: transparent;
 }
 .hero p {
-  font-size: 1.5rem;
-  line-height: 1.6;
+  font-size: clamp(1rem, 3.8vw, 1.5rem);
+  line-height: 1.5;
   max-width: 560px;
   color: var(--color-background);
   background: transparent;
@@ -61,7 +61,7 @@
   align-items: center;
   border-radius: 15px;
   background: transparent;
-  margin: 1rem 0;
+  margin: 1.25rem 0;
   max-height: 100px;
   max-width: 360px;
 }
@@ -73,11 +73,14 @@
   padding: 14px 24px;
   border: none;
   padding: 0.6rem 1.2rem;
-  font-weight: 1600px;
-  font-size: large;
+  font-weight: 700;
+  font-size: 1rem;
   border-radius: 10px;
   cursor: pointer;
   transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .hero__actions .cta:hover {
@@ -87,18 +90,75 @@
 }
 .hero__trust {
   display: flex;
-  gap: 1rem;
+  gap: 0.6rem;
   flex-wrap: wrap;
   background: transparent;
 }
 
 .hero__trust span {
-  font-size: 20px;
-  letter-spacing: 0.15em;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
   border-radius: 6px;
   background-color: var(--color-background);
   color: var(--color-text-secondary);
 
   border: 1px solid rgba(31, 111, 107, 0.35);
   padding: 0.4rem 0.7rem;
+}
+
+@media (min-width: 640px) {
+  .hero {
+    padding: 3rem 1.5rem;
+  }
+
+  .hero::after {
+    top: -14%;
+    right: -16%;
+    width: 280px;
+    height: 280px;
+  }
+
+  .hero__actions {
+    margin: 1.5rem 0;
+  }
+
+  .hero__trust {
+    gap: 0.8rem;
+  }
+
+  .hero__trust span {
+    font-size: 0.95rem;
+    letter-spacing: 0.1em;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero {
+    padding: 3rem 2.5rem;
+  }
+
+  .hero::after {
+    top: -10%;
+    right: -10%;
+    width: 380px;
+    height: 380px;
+  }
+
+  .hero h1 {
+    margin-bottom: 1.5rem;
+    line-height: 1.15;
+  }
+
+  .hero p {
+    line-height: 1.6;
+  }
+
+  .hero__trust {
+    gap: 1rem;
+  }
+
+  .hero__trust span {
+    font-size: 1.25rem;
+    letter-spacing: 0.15em;
+  }
 }

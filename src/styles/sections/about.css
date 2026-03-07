@@ -1,6 +1,6 @@
 .about-background {
   position: relative;
-  padding: 3rem 1.5rem;
+  padding: 2.5rem 1rem;
   background:
     radial-gradient(
       circle at top right,
@@ -13,6 +13,9 @@
       transparent 60%
     ),
     url("https://cdn.pixabay.com/photo/2022/06/01/12/38/bigdata-7235676_1280.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   overflow: hidden;
   border-bottom: 3px solid var(--color-primary);
 }
@@ -24,45 +27,45 @@
   align-items: center;       
   text-align: center;         
   background-color: var(--color-primary);
-  width: 600px;
+  width: min(100%, 600px);
   margin: 1rem auto;
-  padding: 2rem;
+  padding: 1.25rem;
   border-radius: 20px;
 }
 
 
 .about-intro h2 {
-  font-size: 2.6rem;
+  font-size: clamp(1.7rem, 7vw, 2.6rem);
   color: var(--color-background);
   background-color: var(--color-primary);
 }
 
 .about-intro p {
   margin-top: 1rem;
-  font-size: 1.1rem;
+  font-size: clamp(0.95rem, 3.4vw, 1.1rem);
   color: var(--color-background);
   background-color: var(--color-primary);
 }
 
 .about-values {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
+  grid-template-columns: 1fr;
+  gap: 1rem;
   max-width: 1000px;
-  margin: 0 auto 3rem;
+  margin: 0 auto 2rem;
 }
 
 .value-card {
   background: rgba(255, 255, 255, 0.75);
   backdrop-filter: blur(12px);
   border-radius: 24px;
-  padding: 2.5rem;
+  padding: 1.25rem;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.06);
 }
 
 .value-card h3 {
   color: var(--color-primary);
-  font-size: 1.4rem;
+  font-size: clamp(1.15rem, 4.5vw, 1.4rem);
   margin-bottom: 1rem;
   background: transparent;
 }
@@ -80,42 +83,43 @@
   max-width: 1100px;
   margin: 0 auto;
   background-color: var(--color-background);
-  border-radius: 28px;
+  border-radius: 22px;
+  padding: 0.75rem;
 }
 
 .about-team h3 {
-  font-size: 2rem;
-  margin-bottom: 3rem;
+  font-size: clamp(1.4rem, 6vw, 2rem);
+  margin-bottom: 1.25rem;
   color: var(--color-secondary);
   background: transparent;
 }
 
 .team-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 3rem;
+  grid-template-columns: 1fr;
+  gap: 1rem;
   border-radius: 28px;
 }
 
 .team-member {
   background: white;
   border-radius: 28px;
-  padding: 3rem 2rem;
+  padding: 1.5rem 1.1rem;
   box-shadow: 0 25px 60px rgba(0, 0, 0, 0.08);
   background-color: var(--color-secondary);
 }
 
 .team-member img {
-  width: 120px;
-  height: 120px;
+  width: 100px;
+  height: 100px;
   object-fit: cover;
   border-radius: 50%;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   box-shadow: 0 10px 30px rgba(47, 143, 139, 0.35);
 }
 
 .team-member h4 {
-  font-size: 1.3rem;
+  font-size: clamp(1.05rem, 4.5vw, 1.3rem);
   background: transparent;
   color: var(--color-background);
 }
@@ -133,7 +137,7 @@
 .team-member p {
   font-size: 0.95rem;
   color: var(--color-background);
-  line-height: 1.6;
+  line-height: 1.55;
   background: transparent;
 }
 
@@ -141,9 +145,99 @@
 
 /* Responsive */
 
-@media (max-width: 900px) {
+@media (min-width: 640px) {
+  .about-background {
+    padding: 3rem 1.25rem;
+  }
+
+  .about-intro {
+    padding: 1.75rem;
+  }
+
+  .about-values {
+    gap: 1.25rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .value-card {
+    padding: 1.75rem;
+  }
+
+  .about-team {
+    padding: 1rem;
+  }
+
+  .team-grid {
+    gap: 1.25rem;
+  }
+
+  .team-member {
+    padding: 2rem 1.4rem;
+  }
+
+  .team-member img {
+    width: 112px;
+    height: 112px;
+  }
+}
+
+@media (min-width: 900px) {
+  .about-background {
+    padding: 3rem 1.5rem;
+  }
+
   .about-values,
   .team-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .about-intro {
+    padding: 2rem;
+  }
+
+  .value-card {
+    padding: 2.1rem;
+  }
+
+  .about-team h3 {
+    margin-bottom: 2rem;
+  }
+
+  .team-member {
+    padding: 2.4rem 1.8rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .about-values {
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .value-card {
+    padding: 2.5rem;
+  }
+
+  .about-team {
+    border-radius: 28px;
+    padding: 0;
+  }
+
+  .about-team h3 {
+    margin-bottom: 3rem;
+  }
+
+  .team-grid {
+    gap: 3rem;
+  }
+
+  .team-member {
+    padding: 3rem 2rem;
+  }
+
+  .team-member img {
+    width: 120px;
+    height: 120px;
   }
 }

@@ -140,12 +140,16 @@
    RESPONSIVE
    ========================= */
 
+/* Tablet: 768px and down */
 @media (max-width: 768px) {
   .cta-container {
     padding: 56px 28px;
   }
+}
 
-  .cta-subtitle {
-    font-size: 1rem;
+/* Mobile: 480px and down */
+@media (max-width: 480px) {
+  .cta-container {
+    padding: 40px 20px;
   }
 }
