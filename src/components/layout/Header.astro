@@ -6,10 +6,89 @@
   </div>
 
   <div class="header__center">
-    <h2>ABRAZANDO LO IMPOSIBLE</h2>
+    <nav class="header__nav" aria-label="Secciones principales">
+      <button class="header__nav-link" type="button" data-scroll-target="services">Servicios</button>
+      <button class="header__nav-link" type="button" data-scroll-target="portfolio">Casos de éxito</button>
+      <button class="header__nav-link" type="button" data-scroll-target="about">Quiénes somos</button>
+    </nav>
   </div>
 
   <div class="header__right">
+    <button
+      class="header__menu-toggle"
+      type="button"
+      aria-label="Abrir menú"
+      aria-controls="mobile-nav"
+      aria-expanded="false"
+      data-menu-toggle
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
     <a class="cta" href="https://wa.me/message/MTUOLPWELXEOB1" target="_blank" rel="noopener noreferrer">Hablemos</a>
   </div>
 </header>
+
+<nav class="header__mobile-nav" id="mobile-nav" aria-label="Secciones principales en móvil" hidden>
+  <button class="header__nav-link" type="button" data-scroll-target="services">Servicios</button>
+  <button class="header__nav-link" type="button" data-scroll-target="portfolio">Casos de éxito</button>
+  <button class="header__nav-link" type="button" data-scroll-target="about">Quiénes somos</button>
+</nav>
+
+<script is:inline>
+  const scrollButtons = document.querySelectorAll('[data-scroll-target]');
+  const menuToggle = document.querySelector('[data-menu-toggle]');
+  const mobileNav = document.getElementById('mobile-nav');
+
+  const scrollToSection = (targetId) => {
+    const section = document.getElementById(targetId);
+
+    if (!section) {
+      return;
+    }
+
+    const sectionTop = section.getBoundingClientRect().top + window.scrollY;
+    window.scrollTo({ top: sectionTop, behavior: 'smooth' });
+  };
+
+  const closeMobileNav = () => {
+    if (!menuToggle || !mobileNav) {
+      return;
+    }
+
+    menuToggle.setAttribute('aria-expanded', 'false');
+    mobileNav.hidden = true;
+    mobileNav.classList.remove('is-open');
+  };
+
+  scrollButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+      const targetId = button.getAttribute('data-scroll-target');
+
+      if (!targetId) {
+        return;
+      }
+
+      scrollToSection(targetId);
+      closeMobileNav();
+    });
+  });
+
+  if (menuToggle && mobileNav) {
+    menuToggle.addEventListener('click', () => {
+      const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+      const nextState = !isExpanded;
+
+      menuToggle.setAttribute('aria-expanded', String(nextState));
+      mobileNav.hidden = !nextState;
+      mobileNav.classList.toggle('is-open', nextState);
+    });
+
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 768) {
+        closeMobileNav();
+      }
+    });
+  }
+</script>
